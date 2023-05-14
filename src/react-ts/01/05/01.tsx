@@ -1,6 +1,18 @@
-import { getImageUrl } from './Utils';
+import { getImageUrl} from './Utils';
 
-function Profile({ person}: any, {imageSize = 70 }) {
+export type Person = {
+  imageId: string;
+  name: string;
+  profession: string;
+  discovery: string;
+  awards: string[];
+}
+
+type ProfileData = {
+  person: Person;
+}
+
+function Profile({ person}: ProfileData, {imageSize = 70 }) {
   const imageSrc = getImageUrl(person.imageId)
 
   return (

@@ -1,6 +1,16 @@
-import { getImageUrl2 } from './Utils';
+import { getImageUrl } from './Utils';
 
-function Avatar({person}:any, {size}: any) {
+type Person = {
+  imageId: string;
+  name: string;
+}
+
+type ProfileData = {
+  person: Person;
+  size: number;
+}
+
+function Avatar({person, size}: ProfileData) {
   let thumbnailSize = 's';
   if(size > 90) {
     thumbnailSize = 'b'; 
@@ -9,7 +19,7 @@ function Avatar({person}:any, {size}: any) {
   return (
     <img
       className='avatar'
-      src={getImageUrl2(person, thumbnailSize)}
+      src={getImageUrl(person.imageId, thumbnailSize)}
       alt={person.name}
       width={size}
       height={size}
