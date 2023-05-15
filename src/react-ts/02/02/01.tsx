@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { sculptureList } from './Data';
+import { sculptureList, DataType } from './Data';
 
 export default function Gallery() {
   const [index, setIndex] = useState(0);
@@ -24,7 +24,7 @@ export default function Gallery() {
     setShowMore(!showMore);
   }
 
-  let sculpture = sculptureList[index];
+  let sculpture: DataType = sculptureList[index];
   return (
     <>
       <button

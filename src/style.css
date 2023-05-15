@@ -70,3 +70,18 @@ h1, h2 { margin: 5px; }
 h1 { margin-bottom: 10px; }
 ul { padding: 0px 10px 0px 20px; }
 li { margin: 5px; }
+button {
+  margin: 5px;
+}
+
+li {
+  border-radius: 5px;
+}
+
+.highlighted {
+  background: #d2eaff;
+}
+
+.selected {
+  background: #d2eaff;
+}

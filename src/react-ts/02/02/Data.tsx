@@ -1,4 +1,4 @@
-type DataType = {
+export type DataType = {
     name: string;
     artist: string;
     description: string;
